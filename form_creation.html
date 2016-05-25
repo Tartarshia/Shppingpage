@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+
+	<div id="main">
+
+		<h1>Customer's Return Form</h1>
+		<h3>24/7 service</h3>
+
+
+		<form action="form_creation_submit" method="get" accept-charset="utf-8">
+
+
+		<p>Name:</p>
+		<label><input type="text" name="text"
+			value placeholder="Input your name here" required></label>
+
+		<p>Customer Email:</p>
+		<label><input type="email"
+			name="email" value placeholder="Input your email here"></label>
+
+		<p>Customer Password:</p>
+		<label><input type="password" name="pw"
+			value placeholder="Input password here" required></label>
+
+		<p>Customer Gender:</p>
+		<label><input type="radio" name="radio1">male
+			<input type="radio" name="radio2">female</label>
+
+		<p>Select the date that you bought our products:</p>
+		<label><input type="date" name="date"
+			value placeholder="mm/dd/yyyy"></label>
+
+		<p>Select the pattern</p>
+		<input list="shoesize" name="shoesize" value placeholder="---select---">
+		<datalist id="shoesize">
+			<option label="6" value="Fade" />
+			<option label="7" value="Moderate" />
+			<option label="8" value="Grey" />
+			<option label="9" value="Aged" />
+
+			<option label="2" value="Old" />
+			<option label="3" value="Shadow" />
+			<option label="4" value="Stamp" />
+			<option label="5" value="Wanted" />
+
+		</datalist>
+
+
+		<p>How many products are you returning:(from 1 to 10)</p>
+		<label><input type="number" name="number"
+			value placeholder="number" min="1" max="10"></label>
+		<br>
+		<br>
+
+		<input type="submit" value =submit onclick="thanks()"></input><input type="reset" value="reset"></input>
+		<script type="text/javascript">
+			function thanks(){
+				alert("Thank you for choosing Atonein Shop");
+				window.history.go(-1);
+			}
+		</script>
+		</form>
+	</div>
+</body>
+</html>
