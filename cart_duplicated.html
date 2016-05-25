@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html  ng-app="Sale">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shopping Cart</title>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+	<script>
+		var app = angular.module('Sale',[]);
+		app.controller('Sale_1', function($scope){
+			$scope.currentList=[
+			{title:'Aged',price:5},
+			{title:'Grey',price:8},
+			{title:'Fade',price:20},
+			{title:'Moderate',price:15},
+			{title:'Old',price:12},
+			{title:'Shadow',price:10},
+			{title:'Stamp',price:9},
+			{title:'Wanted',price:3}
+
+			];
+			$scope.cart= [];
+
+			$scope.add= function(index){
+				var qty = parseInt(prompt("Enter quantity"));
+				item = $scope.currentList[index];
+				$scope.cart.push({title:item.title,qty:qty,price:item.price});
+				alert("cart updated and added"+qty+item.title);
+			}
+			$scope.remove=function(index){
+				$scope.cart.splice(index,1);
+			}
+			$scope.cartTotal=function(cart){
+
+			}
+			// $scope.cast.push;
+
+		})
+	</script>
+</head>
+<body>
+
+	<div ng-controller="Sale_1">
+
+
+		<table>
+			<tr ng-repeat="item in currentList">
+				<td>{{item.price}}</td><button type="button" ng-click="add($index)">ADD</button>
+				<td >{{item.title}}</td>
+			</tr>
+			{{total(cart)|currency}}
+		</table>
+
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			Total:{{item.price*item.qty|currency}}
+		</table>
+
+
+
+	</div>
+</body>
+</html>

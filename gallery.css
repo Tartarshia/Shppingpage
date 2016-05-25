@@ -1,0 +1,26 @@
+body {
+    padding-top: 40px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.thumb {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+h2 {
+	text-align: right;
+}
+
+input {
+	border-radius: 4px;
+	padding: 6px;
+	width: 60px;
+	vertical-align: middle;
+}
+
+#caculate {
+	float:right;
+}
